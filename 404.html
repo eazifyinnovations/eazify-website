@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Eazify Innovations</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .notfound {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-4);
+    background: radial-gradient(900px 500px at 50% 0%, var(--electric-blue-dim), transparent 60%), var(--light-grey);
+  }
+  .notfound .bracket-index { font-size: 5rem; display: block; margin-bottom: var(--space-2); }
+  .notfound h1 { max-width: 20ch; }
+  .notfound p { max-width: 46ch; }
+  .notfound .hero-actions { justify-content: center; margin-top: var(--space-3); }
+</style>
+</head>
+<body>
+
+<div class="notfound">
+  <span class="bracket-index">404</span>
+  <h1>This page took a wrong turn.</h1>
+  <p>The page you're looking for doesn't exist, may have moved, or the link might be out of date.</p>
+  <div class="hero-actions">
+    <a href="index.html" class="btn btn-primary">Back to Home <span class="btn-arrow">→</span></a>
+    <a href="contact.html" class="btn btn-secondary">Contact us</a>
+  </div>
+</div>
+
+<script src="chatbot.js" defer></script>
+</body>
+</html>

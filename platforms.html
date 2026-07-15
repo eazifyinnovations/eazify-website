@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platforms — Eazify Innovations</title>
+<meta name="description" content="Eazify doesn't only build for clients. We also build our own products — starting with ZiFA, currently in prototype.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .plat-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .zifa-card { background: var(--ink); color: var(--white); border-radius: var(--radius-lg); padding: var(--space-5); }
+  .zifa-card h2, .zifa-card p, .zifa-card h3 { color: var(--white); }
+  .zifa-card p { opacity: 0.8; }
+  .zifa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-4); }
+  .zifa-item { border-top: 1px solid rgba(255,255,255,0.15); padding-top: var(--space-2); }
+  .future-cats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--space-2); }
+  .cat-pill { border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; font-size: 0.9rem; color: var(--deep-navy); }
+  @media (max-width: 900px) { .zifa-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="platforms.html">Platforms</a>
+      <a href="impact.html">Impact</a>
+      <a href="academy.html">Academy</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="strategy-session.html" class="btn btn-primary">Schedule a Strategy Session <span class="btn-arrow">→</span></a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="platforms.html">Platforms</a>
+  <a href="impact.html">Impact</a>
+  <a href="academy.html">Academy</a>
+  <a href="about.html">About</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+  <a href="strategy-session.html" class="btn btn-primary" style="margin-top:12px;">Schedule a Strategy Session</a>
+</div>
+
+<main>
+
+  <section class="plat-hero">
+    <div class="container">
+      <div class="eyebrow">Platforms</div>
+      <h1>We don't only build for clients. We build our own products too.</h1>
+      <p class="lede" style="max-width:62ch;">That matters, because it means we solve our own problems, understand product development from the inside, and think long-term — not just project to project.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="zifa-card reveal">
+        <span class="status-pill"><span class="dot"></span> Prototype</span>
+        <h2>ZiFA</h2>
+        <p style="max-width:60ch;">ZiFA is one of Eazify's flagship internal innovations — currently in prototype, not yet launched. We're building it in the open rather than overpromising, because it represents our long-term vision: products that solve meaningful problems for African businesses.</p>
+        <div class="zifa-grid">
+          <div class="zifa-item">
+            <h3 style="font-size:1rem;">Current stage</h3>
+            <p>Prototype. Not yet available publicly.</p>
+          </div>
+          <div class="zifa-item">
+            <h3 style="font-size:1rem;">Future direction</h3>
+            <p>We'll share more details, features, and timelines as development continues — no invented promises in the meantime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--light-grey);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">What's next</div>
+        <h2>We continue investing in research and product development.</h2>
+        <p>Future products may emerge across these areas — we won't name specifics until they're real.</p>
+      </div>
+      <div class="future-cats reveal">
+        <span class="cat-pill">Education</span>
+        <span class="cat-pill">Business</span>
+        <span class="cat-pill">AI</span>
+        <span class="cat-pill">Productivity</span>
+        <span class="cat-pill">Digital Infrastructure</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="final-cta reveal">
+        <h2>Curious where this is heading?</h2>
+        <p>Follow our progress through Insights, or talk to us directly about what we're building.</p>
+        <div class="hero-actions">
+          <a href="insights.html" class="btn btn-primary">Read Insights <span class="btn-arrow">→</span></a>
+          <a href="contact.html" class="btn btn-ghost-light">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="logo"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img"></a>
+        <p>Helping businesses build better systems, then supporting those systems with technology that helps them grow.</p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+          <button class="btn btn-primary" style="padding:10px 16px;">Join</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnerships.html">Partnerships</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="solutions.html#ai">Business &amp; AI Transformation</a>
+        <a href="solutions.html#software">Custom Software &amp; Platforms</a>
+        <a href="solutions.html#websites">Business Websites</a>
+        <a href="solutions.html#brand">Brand Systems</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="impact.html">Impact</a>
+        <a href="academy.html">Academy</a>
+        <a href="insights.html">Insights</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="contact.html">Get in touch</a>
+        <a href="strategy-session.html">Schedule a Strategy Session</a>
+        <a href="mailto:hello@eazifyinnovations.com">hello@eazifyinnovations.com</a>
+        <a>Abuja, Nigeria</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Eazify Innovations. Your Trusted Technology Partner. &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;">Privacy</a> · <a href="terms.html" style="color:inherit;">Terms</a> · <a href="cookies.html" style="color:inherit;">Cookies</a></span>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="X">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="chatbot.js" defer></script>
+</body>
+</html>

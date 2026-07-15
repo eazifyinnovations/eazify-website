@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Eazify Innovations</title>
+<meta name="description" content="Tell us about your business, your goals, and the challenges you're trying to solve. Let's explore whether we're the right partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-5); align-items: start; }
+  .contact-side { position: sticky; top: 110px; }
+  .contact-side-item { display: flex; gap: 12px; margin-bottom: var(--space-3); }
+  .contact-side-item .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 2px; }
+  .contact-side-item a, .contact-side-item span.value { font-family: var(--font-display); color: var(--deep-navy); font-weight: 500; }
+  form.contact-form { display: flex; flex-direction: column; gap: var(--space-3); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 0.9rem; font-weight: 500; color: var(--deep-navy); }
+  .field input, .field select, .field textarea {
+    padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+    font-family: var(--font-body); font-size: 0.95rem; color: var(--ink); background: var(--white);
+    transition: border-color 0.2s var(--ease);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--electric-blue); outline: none; }
+  .field textarea { resize: vertical; min-height: 100px; }
+  .form-note { font-size: 0.85rem; color: var(--muted); }
+  .form-success { display: none; background: var(--light-grey); border-radius: var(--radius-md); padding: var(--space-3); margin-top: var(--space-2); }
+  .form-success.is-visible { display: block; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .contact-side { position: static; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="platforms.html">Platforms</a>
+      <a href="impact.html">Impact</a>
+      <a href="academy.html">Academy</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="strategy-session.html" class="btn btn-primary">Schedule a Strategy Session <span class="btn-arrow">→</span></a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="platforms.html">Platforms</a>
+  <a href="impact.html">Impact</a>
+  <a href="academy.html">Academy</a>
+  <a href="about.html">About</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+  <a href="strategy-session.html" class="btn btn-primary" style="margin-top:12px;">Schedule a Strategy Session</a>
+</div>
+
+<main>
+
+  <section class="contact-hero">
+    <div class="container">
+      <div class="eyebrow">Let's start a conversation</div>
+      <h1>Every meaningful project begins with understanding.</h1>
+      <p class="lede" style="max-width:62ch;">Tell us about your business, your goals, and the challenges you're trying to solve. We'll explore whether we're the right partner.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+
+      <div class="contact-side reveal">
+        <div class="contact-side-item">
+          <div>
+            <span class="label">Email</span>
+            <a href="mailto:hello@eazifyinnovations.com">hello@eazifyinnovations.com</a>
+          </div>
+        </div>
+        <div class="contact-side-item">
+          <div>
+            <span class="label">Location</span>
+            <span class="value">Abuja, Nigeria</span>
+          </div>
+        </div>
+        <div class="contact-side-item">
+          <div>
+            <span class="label">Prefer a structured conversation?</span>
+            <a href="strategy-session.html">Schedule a Strategy Session →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqrnqqb" method="POST">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="organisation">Organisation</label>
+              <input type="text" id="organisation" name="organisation">
+            </div>
+            <div class="field">
+              <label for="role">Role</label>
+              <input type="text" id="role" name="role">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="industry">Industry</label>
+              <input type="text" id="industry" name="industry">
+            </div>
+            <div class="field">
+              <label for="timeline">Approximate timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one</option>
+                <option>Right away</option>
+                <option>Within 3 months</option>
+                <option>Within 6 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="goal">What are you trying to achieve?</label>
+            <textarea id="goal" name="goal" required></textarea>
+          </div>
+          <div class="field">
+            <label for="challenge">What's the current challenge?</label>
+            <textarea id="challenge" name="challenge"></textarea>
+          </div>
+          <div class="field">
+            <label for="contact-method">Preferred contact method</label>
+            <select id="contact-method" name="contact_method">
+              <option value="">Select one</option>
+              <option>Email</option>
+              <option>Phone call</option>
+              <option>Video call</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" id="contactSubmitBtn" style="align-self:flex-start;">Send message <span class="btn-arrow">→</span></button>
+          <p class="form-note">Prefer email? Reach us directly at <a href="mailto:hello@eazifyinnovations.com" style="color:var(--electric-blue);">hello@eazifyinnovations.com</a>.</p>
+          <div class="form-success" id="formSuccess">
+            <p style="margin:0; color:var(--deep-navy); font-weight:500;">Thanks — your message is in. We'll get back to you shortly.</p>
+          </div>
+          <div class="form-success" id="formError" style="background:#fdecea;">
+            <p style="margin:0; color:#a12a1f; font-weight:500;">Something went wrong sending your message. Please try again, or email us directly at <a href="mailto:hello@eazifyinnovations.com" style="color:#a12a1f;">hello@eazifyinnovations.com</a>.</p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="logo"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img"></a>
+        <p>Helping businesses build better systems, then supporting those systems with technology that helps them grow.</p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+          <button class="btn btn-primary" style="padding:10px 16px;">Join</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnerships.html">Partnerships</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="solutions.html#ai">Business &amp; AI Transformation</a>
+        <a href="solutions.html#software">Custom Software &amp; Platforms</a>
+        <a href="solutions.html#websites">Business Websites</a>
+        <a href="solutions.html#brand">Brand Systems</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="impact.html">Impact</a>
+        <a href="academy.html">Academy</a>
+        <a href="insights.html">Insights</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="contact.html">Get in touch</a>
+        <a href="strategy-session.html">Schedule a Strategy Session</a>
+        <a href="mailto:hello@eazifyinnovations.com">hello@eazifyinnovations.com</a>
+        <a>Abuja, Nigeria</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Eazify Innovations. Your Trusted Technology Partner. &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;">Privacy</a> · <a href="terms.html" style="color:inherit;">Terms</a> · <a href="cookies.html" style="color:inherit;">Cookies</a></span>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="X">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  const errorBox = document.getElementById('formError');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      success.classList.remove('is-visible');
+      errorBox.classList.remove('is-visible');
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          success.classList.add('is-visible');
+          form.reset();
+        } else {
+          errorBox.classList.add('is-visible');
+        }
+      } catch (err) {
+        errorBox.classList.add('is-visible');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+      }
+    });
+  }
+</script>
+<script src="chatbot.js" defer></script>
+</body>
+</html>
+
