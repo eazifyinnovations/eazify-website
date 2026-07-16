@@ -20,11 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('is-open', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', isOpen);
     });
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       toggle.classList.remove('is-open');
       mobileMenu.classList.remove('is-open');
       document.body.style.overflow = '';
+      document.body.classList.remove('nav-open');
     }));
   }
 
@@ -59,6 +61,38 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (steps.length) {
     steps[0].classList.add('is-active');
   }
+
+  // Footer newsletter signup (shares the Formspree endpoint, tagged separately)
+  document.querySelectorAll('[data-newsletter-form]').forEach(form => {
+    const note = form.nextElementSibling;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button');
+      btn.disabled = true;
+      if (note) { note.textContent = ''; note.classList.remove('is-error'); }
+      try {
+        const response = await fetch('https://formspree.io/f/xaqrnqqb', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (response.ok) {
+          if (note) note.textContent = "You're on the list — thanks!";
+          form.reset();
+        } else if (note) {
+          note.textContent = 'Something went wrong. Please try again.';
+          note.classList.add('is-error');
+        }
+      } catch (err) {
+        if (note) {
+          note.textContent = 'Something went wrong. Please try again.';
+          note.classList.add('is-error');
+        }
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
 
   // FAQ accordion (used on FAQ page; harmless elsewhere)
   document.querySelectorAll('.faq-item').forEach(item => {

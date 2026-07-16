@@ -145,10 +145,12 @@
       <div class="footer-col footer-brand">
         <a href="index.html" class="logo"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img"></a>
         <p>Helping businesses build better systems, then supporting those systems with technology that helps them grow.</p>
-        <div class="footer-newsletter">
-          <input type="email" placeholder="Your email" aria-label="Email for newsletter">
-          <button class="btn btn-primary" style="padding:10px 16px;">Join</button>
-        </div>
+        <form class="footer-newsletter" data-newsletter-form>
+          <input type="email" name="email" placeholder="Your email" aria-label="Email for newsletter" required>
+          <input type="hidden" name="_subject" value="Newsletter signup — Eazify website">
+          <button type="submit" class="btn btn-primary" style="padding:10px 16px;">Join</button>
+        </form>
+        <p class="newsletter-note" aria-live="polite"></p>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

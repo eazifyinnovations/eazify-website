@@ -30,13 +30,28 @@
 
     const toggle = el('button', {
       class: 'eazify-chat-toggle',
-      'aria-label': 'Open chat with Eazify',
+      'aria-label': 'Chat with Eazify support',
       'aria-expanded': 'false',
       type: 'button',
     });
+    // Friendly support-avatar icon: rounded head, warm skin tone, headset — reads as
+    // "a real person is here to help" rather than an abstract chat-bubble glyph.
     toggle.innerHTML =
-      '<svg class="eazify-chat-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5C4 7.80558 7.80558 4 12.5 4C17.1944 4 21 7.58558 21 12.28C21 16.9744 17.1944 20.28 12.5 20.28C11.0827 20.28 9.746 19.9382 8.57 19.335L4.5 20.28L5.6 16.55C4.59 15.31 4 13.96 4 12.5Z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '<svg class="eazify-chat-icon-open" width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<circle cx="24" cy="24" r="22" fill="#0A63F7"/>' +
+        '<path d="M11 23a13 13 0 0 1 26 0" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" fill="none"/>' +
+        '<rect x="9" y="21" width="6" height="10" rx="3" fill="#FFFFFF"/>' +
+        '<rect x="33" y="21" width="6" height="10" rx="3" fill="#FFFFFF"/>' +
+        '<circle cx="24" cy="26" r="11" fill="#C88A5A"/>' +
+        '<path d="M13 24c0-7 22-7 22 0" fill="#0A63F7"/>' +
+        '<circle cx="19.5" cy="27" r="1.6" fill="#1B2130"/>' +
+        '<circle cx="28.5" cy="27" r="1.6" fill="#1B2130"/>' +
+        '<path d="M19 32c1.6 1.8 8.4 1.8 10 0" stroke="#1B2130" stroke-width="1.8" stroke-linecap="round" fill="none"/>' +
+        '<rect x="21.5" y="34.5" width="5" height="5" rx="2" fill="#FFFFFF"/>' +
+      '</svg>' +
       '<svg class="eazify-chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
+
+    const nudge = el('div', { class: 'eazify-chat-nudge' , html: 'Need help? Click to chat with us 💬'});
 
     const panel = el('div', { class: 'eazify-chat-panel', role: 'dialog', 'aria-label': 'Chat with Eazify' });
 
@@ -71,10 +86,11 @@
     panel.appendChild(form);
 
     root.appendChild(panel);
+    root.appendChild(nudge);
     root.appendChild(toggle);
     document.body.appendChild(root);
 
-    return { root, toggle, panel, messages, form, input };
+    return { root, toggle, panel, messages, form, input, nudge };
   }
 
   function addBubble(messagesEl, role, text) {
@@ -133,8 +149,33 @@
   function init() {
     const widget = buildWidget();
 
+    // Nudge people to notice the widget is clickable — most visitors don't
+    // recognize a floating icon as a live chat without a hint.
+    let nudgeShown = false;
+    let nudgeTimer = setTimeout(() => {
+      if (!isOpen) {
+        widget.nudge.classList.add('is-visible');
+        nudgeShown = true;
+      }
+    }, 2200);
+    let nudgeAutoHide = setTimeout(() => {
+      widget.nudge.classList.remove('is-visible');
+    }, 10000);
+
+    function dismissNudge() {
+      clearTimeout(nudgeTimer);
+      clearTimeout(nudgeAutoHide);
+      widget.nudge.classList.remove('is-visible');
+    }
+
+    widget.nudge.addEventListener('click', () => {
+      dismissNudge();
+      widget.toggle.click();
+    });
+
     widget.toggle.addEventListener('click', () => {
       isOpen = !isOpen;
+      dismissNudge();
       widget.root.classList.toggle('is-open', isOpen);
       widget.toggle.setAttribute('aria-expanded', String(isOpen));
       if (isOpen && widget.messages.children.length === 0) {
