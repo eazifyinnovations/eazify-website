@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eazifyinnovations.com/sitemap.xml
