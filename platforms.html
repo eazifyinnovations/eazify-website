@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('eazify-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Platforms — Eazify Innovations</title>
 <meta name="description" content="Eazify doesn't only build for clients. We also build our own products — starting with ZiFA, currently in prototype.">
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   .plat-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
-  .zifa-card { background: var(--ink); color: var(--white); border-radius: var(--radius-lg); padding: var(--space-5); }
+  .zifa-card { background: var(--surface-dark); color: var(--white); border-radius: var(--radius-lg); padding: var(--space-5); }
   .zifa-card h2, .zifa-card p, .zifa-card h3 { color: var(--white); }
   .zifa-card p { opacity: 0.8; }
   .zifa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-4); }
@@ -27,7 +28,7 @@
 
 <header class="site-header">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img"></a>
+    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img logo-img-light"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img logo-img-dark"></a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="solutions.html">Solutions</a>
@@ -38,6 +39,10 @@
       <a href="insights.html">Insights</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+      <svg class="theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
     <div class="nav-cta">
       <a href="strategy-session.html" class="btn btn-primary">Schedule a Strategy Session <span class="btn-arrow">→</span></a>
     </div>
@@ -72,6 +77,7 @@
         <span class="status-pill"><span class="dot"></span> Prototype</span>
         <h2>ZiFA</h2>
         <p style="max-width:60ch;">ZiFA is one of Eazify's flagship internal innovations — currently in prototype, not yet launched. We're building it in the open rather than overpromising, because it represents our long-term vision: products that solve meaningful problems for African businesses.</p>
+        <p style="max-width:60ch; margin-top:var(--space-2);">It's also where everything else we do comes together. Client work sharpens the judgment we bring to it. Academy graduates are a pipeline of people who could help build it. ZiFA isn't a side project — it's the proof of what the rest of Eazify is for.</p>
         <div class="zifa-grid">
           <div class="zifa-item">
             <h3 style="font-size:1rem;">Current stage</h3>
@@ -162,9 +168,9 @@
     <div class="footer-bottom">
       <span>© <span id="year"></span> Eazify Innovations. Your Trusted Technology Partner. &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;">Privacy</a> · <a href="terms.html" style="color:inherit;">Terms</a> · <a href="cookies.html" style="color:inherit;">Cookies</a></span>
       <div class="footer-social">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="X">X</a>
+        <span class="social-soon" aria-label="LinkedIn coming soon" title="Coming soon">LinkedIn</span>
+        <a href="https://www.instagram.com/eazifyinnovations" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://x.com/eazifytech" target="_blank" rel="noopener" aria-label="X">X</a>
       </div>
     </div>
   </div>

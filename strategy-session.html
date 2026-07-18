@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('eazify-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schedule a Strategy Session — Eazify Innovations</title>
 <meta name="description" content="A Strategy Session is a structured conversation to understand your business, identify opportunities, and explore whether Eazify is the right partner.">
@@ -15,9 +16,11 @@
   .ss-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
   .ss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: start; }
   .expect-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
-  .expect-list li { display: flex; gap: 14px; align-items: flex-start; }
+  .expect-list li { display: flex; gap: 14px; align-items: flex-start; position: relative; padding-left: 4px; }
+  .expect-list li::before { content: ""; position: absolute; left: 15px; top: 32px; bottom: -20px; width: 2px; background: var(--line); }
+  .expect-list li:last-child::before { display: none; }
   .expect-num { font-family: var(--font-display); font-weight: 600; color: var(--electric-blue); flex-shrink: 0; }
-  .honesty-box { background: var(--deep-navy); color: var(--white); border-radius: var(--radius-lg); padding: var(--space-4); margin-top: var(--space-4); }
+  .honesty-box { background: var(--surface-dark-2); color: var(--white); border-radius: var(--radius-lg); padding: var(--space-4); margin-top: var(--space-4); }
   .honesty-box h3, .honesty-box p { color: var(--white); }
   .honesty-box p { opacity: 0.85; }
   .booking-card { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-4); }
@@ -28,7 +31,7 @@
 
 <header class="site-header">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img"></a>
+    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img logo-img-light"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img logo-img-dark"></a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="solutions.html">Solutions</a>
@@ -39,6 +42,10 @@
       <a href="insights.html">Insights</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+      <svg class="theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
     <div class="nav-cta">
       <a href="strategy-session.html" class="btn btn-primary">Schedule a Strategy Session <span class="btn-arrow">→</span></a>
     </div>
@@ -61,6 +68,7 @@
 
   <section class="ss-hero">
     <div class="container">
+      <div class="hero-icon-accent"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="15" rx="2" stroke="var(--electric-blue)" stroke-width="1.6"/><path d="M8 3v4M16 3v4M3 10h18" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
       <div class="eyebrow">Strategy Session</div>
       <h1>This isn't a sales presentation. It's a structured conversation.</h1>
       <p class="lede" style="max-width:60ch;">We use this session to understand your business, identify real opportunities, and discuss possible technology solutions — before anything is built.</p>
@@ -144,9 +152,9 @@
     <div class="footer-bottom">
       <span>© <span id="year"></span> Eazify Innovations. Your Trusted Technology Partner. &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;">Privacy</a> · <a href="terms.html" style="color:inherit;">Terms</a> · <a href="cookies.html" style="color:inherit;">Cookies</a></span>
       <div class="footer-social">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="X">X</a>
+        <span class="social-soon" aria-label="LinkedIn coming soon" title="Coming soon">LinkedIn</span>
+        <a href="https://www.instagram.com/eazifyinnovations" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://x.com/eazifytech" target="_blank" rel="noopener" aria-label="X">X</a>
       </div>
     </div>
   </div>

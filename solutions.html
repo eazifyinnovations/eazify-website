@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('eazify-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solutions — Eazify Innovations</title>
 <meta name="description" content="Eazify helps businesses solve real operational problems — through AI, custom software, websites, brand systems, and long-term technology partnership.">
@@ -16,6 +17,7 @@
   .sol-block { padding: var(--space-6) 0; border-bottom: 1px solid var(--line); }
   .sol-block:last-of-type { border-bottom: none; }
   .sol-block-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-5); align-items: start; }
+  .sol-icon { width: 52px; height: 52px; border-radius: var(--radius-md); background: var(--electric-blue-dim); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-2); }
   .sol-problem { font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-navy); margin-bottom: var(--space-2); }
   .sol-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .sol-list li { display: flex; gap: 10px; font-size: 0.95rem; color: var(--muted); }
@@ -29,7 +31,7 @@
 
 <header class="site-header">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img"></a>
+    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img logo-img-light"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img logo-img-dark"></a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="solutions.html">Solutions</a>
@@ -40,6 +42,10 @@
       <a href="insights.html">Insights</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+      <svg class="theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
     <div class="nav-cta">
       <a href="strategy-session.html" class="btn btn-primary">Schedule a Strategy Session <span class="btn-arrow">→</span></a>
     </div>
@@ -72,7 +78,7 @@
   <section class="sol-block" id="ai">
     <div class="container sol-block-grid">
       <div class="reveal">
-        <span class="bracket-index">01</span>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a8 8 0 0 0-8 8v4a2 2 0 0 0 2 2h1v-6H5a7 7 0 0 1 14 0h-2v6h1a2 2 0 0 0 2-2v-4a8 8 0 0 0-8-8Z" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><span class="bracket-index">01</span>
         <h2 style="margin-top:12px;">Business &amp; AI Transformation</h2>
         <p>Many organisations know AI matters. Few know where to start — and some rush into tools that don't solve the right problem.</p>
       </div>
@@ -98,7 +104,7 @@
   <section class="sol-block" id="software">
     <div class="container sol-block-grid">
       <div class="reveal">
-        <span class="bracket-index">02</span>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="12" rx="2" stroke="var(--electric-blue)" stroke-width="1.6"/><path d="M8 20h8M12 16v4" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linecap="round"/></svg></div><span class="bracket-index">02</span>
         <h2 style="margin-top:12px;">Custom Software &amp; Digital Platforms</h2>
         <p>Off-the-shelf software rarely fits a business perfectly. We build around how you actually operate.</p>
       </div>
@@ -124,7 +130,7 @@
   <section class="sol-block" id="websites">
     <div class="container sol-block-grid">
       <div class="reveal">
-        <span class="bracket-index">03</span>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="16" rx="2" stroke="var(--electric-blue)" stroke-width="1.6"/><path d="M3 8.5h18" stroke="var(--electric-blue)" stroke-width="1.6"/><circle cx="6" cy="6.25" r="0.75" fill="var(--electric-blue)"/><circle cx="8.5" cy="6.25" r="0.75" fill="var(--electric-blue)"/></svg></div><span class="bracket-index">03</span>
         <h2 style="margin-top:12px;">Business Websites &amp; Digital Experiences</h2>
         <p>Your website should help people trust your business before they ever speak to you.</p>
       </div>
@@ -150,7 +156,7 @@
   <section class="sol-block" id="brand">
     <div class="container sol-block-grid">
       <div class="reveal">
-        <span class="bracket-index">04</span>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 3 7l9 5 9-5-9-5Z" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><span class="bracket-index">04</span>
         <h2 style="margin-top:12px;">Brand Systems &amp; Digital Identity</h2>
         <p>Every business communicates. Branding determines how consistently that communication happens.</p>
       </div>
@@ -174,7 +180,7 @@
   <section class="sol-block" id="partnership">
     <div class="container sol-block-grid">
       <div class="reveal">
-        <span class="bracket-index">05</span>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 8c0-2.8-2.2-5-5-5S7 5.2 7 8c0 2 1.2 3.7 3 4.5V19l2 2 2-2v-6.5c1.8-.8 3-2.5 3-4.5Z" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><span class="bracket-index">05</span>
         <h2 style="margin-top:12px;">Technology Partnership</h2>
         <p>This is where Eazify becomes different. Most companies complete a project and move on.</p>
       </div>
@@ -254,9 +260,9 @@
     <div class="footer-bottom">
       <span>© <span id="year"></span> Eazify Innovations. Your Trusted Technology Partner. &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;">Privacy</a> · <a href="terms.html" style="color:inherit;">Terms</a> · <a href="cookies.html" style="color:inherit;">Cookies</a></span>
       <div class="footer-social">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="X">X</a>
+        <span class="social-soon" aria-label="LinkedIn coming soon" title="Coming soon">LinkedIn</span>
+        <a href="https://www.instagram.com/eazifyinnovations" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://x.com/eazifytech" target="_blank" rel="noopener" aria-label="X">X</a>
       </div>
     </div>
   </div>
