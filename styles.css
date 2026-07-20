@@ -18,6 +18,8 @@
   --surface-dark: #0B0F19;
   --surface-dark-2: #0B1E4D;
   --pure-white: #FFFFFF;
+  --syntax-purple: #7C3AED;
+  --syntax-teal: #0D9488;
 
   --font-display: 'Poppins', 'Segoe UI', sans-serif;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
@@ -50,6 +52,8 @@ html { scroll-behavior: smooth; }
   --light-grey: #161D2E;
   --line: rgba(255,255,255,0.12);
   --muted: #97A2B8;
+  --syntax-purple: #A78BFA;
+  --syntax-teal: #2DD4BF;
 }
 
 [data-theme="dark"] body { background: var(--white); }
@@ -280,7 +284,10 @@ blockquote::before {
 }
 .logo-img-dark { display: none; }
 [data-theme="dark"] .logo-img-light { display: none; }
-[data-theme="dark"] .logo-img-dark { display: block; }
+[data-theme="dark"] .logo-img-dark { display: inline; }
+[data-theme="dark"] .logo-img.logo-img-dark { display: block; }
+[data-theme="dark"] .marquee-logo.logo-img-dark { display: block; }
+[data-theme="dark"] .case-logo-inline.logo-img-dark { display: inline; vertical-align: middle; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -310,6 +317,16 @@ blockquote::before {
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; color: var(--deep-navy); flex-shrink: 0;
   transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+  position: relative;
+}
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  min-width: 44px;
+  min-height: 44px;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
 }
 .theme-toggle:hover { border-color: var(--electric-blue); transform: translateY(-1px); }
 .theme-icon-moon { display: none; }
@@ -392,13 +409,21 @@ blockquote::before {
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-typewriter {
-  font-family: 'Courier New', ui-monospace, monospace;
+  font-family: 'Fira Code', ui-monospace, 'Courier New', monospace;
+  font-size: 0.92rem;
+  font-weight: 500;
   min-height: 1.4em;
   display: flex;
   align-items: center;
   text-transform: none;
+  white-space: nowrap;
 }
 .hero-typewriter::before, .hero-typewriter::after { content: none; }
+.tw-bracket { color: var(--muted); }
+.tw-name { transition: color 0.4s ease; }
+.tw-name.c0 { color: var(--electric-blue); }
+.tw-name.c1 { color: var(--syntax-purple); }
+.tw-name.c2 { color: var(--syntax-teal); }
 .typewriter-cursor {
   display: inline-block;
   width: 2px;

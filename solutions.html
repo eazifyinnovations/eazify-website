@@ -18,10 +18,14 @@
 <meta name="twitter:image" content="https://eazifyinnovations.com/assets/eazify-og-image.png">
 <link rel="canonical" href="https://eazifyinnovations.com/solutions.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://formspree.io">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A63F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
   .sol-page-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
@@ -29,6 +33,16 @@
   .sol-block:last-of-type { border-bottom: none; }
   .sol-block-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-5); align-items: start; }
   .sol-icon { width: 52px; height: 52px; border-radius: var(--radius-md); background: var(--electric-blue-dim); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-2); }
+  .sol-overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-4); }
+  .sol-overview-item { display: flex; flex-direction: column; gap: 6px; padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-md); text-decoration: none; color: inherit; transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease); }
+  .sol-overview-item:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -20px rgba(11,30,77,0.3); border-color: transparent; }
+  .sol-overview-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .sol-overview-item strong { font-family: var(--font-display); font-size: 0.98rem; color: var(--deep-navy); line-height: 1.3; }
+  .sol-overview-fit { font-size: 0.85rem; color: var(--electric-blue); font-weight: 600; margin-top: auto; }
+  .sol-chatbot-nudge { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; background: var(--light-grey); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4); }
+  .sol-chatbot-nudge p { margin: 0; font-size: 0.92rem; }
+  @media (max-width: 900px) { .sol-overview { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .sol-overview { grid-template-columns: 1fr; } .sol-chatbot-nudge { flex-direction: column; align-items: flex-start; } }
   .sol-problem { font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-navy); margin-bottom: var(--space-2); }
   .sol-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .sol-list li { display: flex; gap: 10px; font-size: 0.95rem; color: var(--muted); }
@@ -37,13 +51,43 @@
   .sol-outcome-box h4 { font-family: var(--font-display); font-size: 0.95rem; color: var(--deep-navy); margin-bottom: 8px; }
   @media (max-width: 900px) { .sol-block-grid { grid-template-columns: 1fr; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Eazify Innovations",
+  "alternateName": "Eazify",
+  "description": "A technology consultancy in Abuja, Nigeria helping businesses across Africa and beyond with AI transformation, custom software, business websites, and brand systems.",
+  "url": "https://eazifyinnovations.com/",
+  "logo": "https://eazifyinnovations.com/assets/eazify-logo-black-text.png",
+  "image": "https://eazifyinnovations.com/assets/eazify-og-image.png",
+  "email": "hello@eazifyinnovations.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Abuja",
+    "addressCountry": "NG"
+  },
+  "areaServed": ["Nigeria", "Africa", "Remote / Worldwide"],
+  "sameAs": [
+    "https://www.instagram.com/eazifyinnovations",
+    "https://x.com/eazifytech"
+  ],
+  "serviceType": [
+    "Business & AI Transformation",
+    "Custom Software & Digital Platforms",
+    "Business Websites & Digital Experiences",
+    "Brand Systems & Digital Identity",
+    "Technology Partnership"
+  ]
+}
+</script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="site-header">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" alt="Eazify Innovations" class="logo-img logo-img-light"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img logo-img-dark"></a>
+    <a href="index.html" class="logo"><img src="assets/eazify-logo-black-text.png" width="2073" height="704" alt="Eazify Innovations" class="logo-img logo-img-light"><img src="assets/eazify-logo-white-text.png" width="2073" height="704" alt="Eazify Innovations" class="logo-img logo-img-dark"></a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="solutions.html">Solutions</a>
@@ -54,7 +98,7 @@
       <a href="insights.html">Insights</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
+    <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" type="button">
       <svg class="theme-icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
     </button>
@@ -83,6 +127,46 @@
       <div class="eyebrow">Solutions</div>
       <h1>People don't wake up wanting a website. They want more customers, less manual work, and a business that runs smoother.</h1>
       <p class="lede" style="max-width:62ch;">Technology is how we get you there. Every solution below starts with the business problem — not the software.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="sol-overview reveal">
+        <a href="#ai" class="sol-overview-item">
+          <span class="sol-overview-label">If you're saying...</span>
+          <strong>"My team keeps repeating the same work."</strong>
+          <span class="sol-overview-fit">→ Business &amp; AI Transformation</span>
+        </a>
+        <a href="#software" class="sol-overview-item">
+          <span class="sol-overview-label">If you're saying...</span>
+          <strong>"No off-the-shelf tool fits how we work."</strong>
+          <span class="sol-overview-fit">→ Custom Software &amp; Platforms</span>
+        </a>
+        <a href="#websites" class="sol-overview-item">
+          <span class="sol-overview-label">If you're saying...</span>
+          <strong>"Our website doesn't build trust or bring leads."</strong>
+          <span class="sol-overview-fit">→ Business Websites</span>
+        </a>
+        <a href="#brand" class="sol-overview-item">
+          <span class="sol-overview-label">If you're saying...</span>
+          <strong>"We look different everywhere people find us."</strong>
+          <span class="sol-overview-fit">→ Brand Systems</span>
+        </a>
+        <a href="#partnership" class="sol-overview-item">
+          <span class="sol-overview-label">If you're saying...</span>
+          <strong>"We don't want a vendor who disappears after launch."</strong>
+          <span class="sol-overview-fit">→ Technology Partnership</span>
+        </a>
+      </div>
+
+      <div class="sol-chatbot-nudge reveal">
+        <div>
+          <strong>Not sure which of these fits?</strong>
+          <p style="margin:4px 0 0;">Tell our assistant what's going on in your business — it'll point you to the right one in under a minute.</p>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="document.querySelector('.eazify-chat-toggle')?.click()">Ask the assistant <span class="btn-arrow">→</span></button>
+      </div>
     </div>
   </section>
 
@@ -232,7 +316,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col footer-brand">
-        <a href="index.html" class="logo"><img src="assets/eazify-logo-white-text.png" alt="Eazify Innovations" class="logo-img"></a>
+        <a href="index.html" class="logo"><img src="assets/eazify-logo-white-text.png" width="2073" height="704" alt="Eazify Innovations" class="logo-img"></a>
         <p>Helping businesses build better systems, then supporting those systems with technology that helps them grow.</p>
         <form class="footer-newsletter" data-newsletter-form>
           <input type="email" name="email" placeholder="Your email" aria-label="Email for newsletter" required>
