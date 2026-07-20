@@ -3,7 +3,7 @@
 
 (function () {
   const GREETING =
-    "Hi, I'm the Eazify assistant. Tell me a bit about your business and what you're hoping to achieve, and I'll help point you to the right solution — or connect you with the team.";
+    "Hi, I'm Eazi, Eazify's AI assistant. Eazi can recommend the right solution for your business.";
 
   const FALLBACK_ERROR =
     "I'm having trouble connecting right now. You can reach us directly at hello@eazifyinnovations.com, or schedule a Strategy Session.";
@@ -30,33 +30,41 @@
 
     const toggle = el('button', {
       class: 'eazify-chat-toggle',
-      'aria-label': 'Chat with Eazify support',
+      'aria-label': 'Chat with EaziAI',
       'aria-expanded': 'false',
       type: 'button',
     });
-    // Friendly support-avatar icon: rounded head, warm skin tone, headset — reads as
-    // "a real person is here to help" rather than an abstract chat-bubble glyph.
+    // Friendly support-avatar: warm brown skin tone, natural coily hair, soft
+    // smile, subtle headset — reads as "a real person is here to help."
+    // Eyes/head are split into their own groups so CSS can blink/bob them.
     toggle.innerHTML =
-      '<svg class="eazify-chat-icon-open" width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-        '<circle cx="24" cy="24" r="22" fill="#0A63F7"/>' +
-        '<path d="M11 23a13 13 0 0 1 26 0" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" fill="none"/>' +
-        '<rect x="9" y="21" width="6" height="10" rx="3" fill="#FFFFFF"/>' +
-        '<rect x="33" y="21" width="6" height="10" rx="3" fill="#FFFFFF"/>' +
-        '<circle cx="24" cy="26" r="11" fill="#C88A5A"/>' +
-        '<path d="M13 24c0-7 22-7 22 0" fill="#0A63F7"/>' +
-        '<circle cx="19.5" cy="27" r="1.6" fill="#1B2130"/>' +
-        '<circle cx="28.5" cy="27" r="1.6" fill="#1B2130"/>' +
-        '<path d="M19 32c1.6 1.8 8.4 1.8 10 0" stroke="#1B2130" stroke-width="1.8" stroke-linecap="round" fill="none"/>' +
-        '<rect x="21.5" y="34.5" width="5" height="5" rx="2" fill="#FFFFFF"/>' +
+      '<svg class="eazify-chat-icon-open" width="40" height="40" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+        '<circle cx="28" cy="28" r="26" fill="#0A63F7"/>' +
+        '<g class="eazi-avatar-bob">' +
+          '<path d="M13 28a15 15 0 0 1 30 0" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" fill="none"/>' +
+          '<rect x="10.5" y="25" width="6.5" height="11" rx="3.2" fill="#FFFFFF"/>' +
+          '<rect x="39" y="25" width="6.5" height="11" rx="3.2" fill="#FFFFFF"/>' +
+          '<path d="M15.2 27c-0.3-7.8 5.3-13.5 12.8-13.5s13.1 5.7 12.8 13.5c-0.3 3-1.4 5-2.4 6.2-0.2-6.8-4-11.7-10.4-11.7s-10.2 4.9-10.4 11.7c-1-1.2-2.1-3.2-2.4-6.2Z" fill="#1B2130"/>' +
+          '<circle cx="28" cy="31" r="12" fill="#9A6238"/>' +
+          '<g class="eazi-avatar-eyes">' +
+            '<circle cx="23.2" cy="31.5" r="1.7" fill="#1B2130"/>' +
+            '<circle cx="32.8" cy="31.5" r="1.7" fill="#1B2130"/>' +
+          '</g>' +
+          '<path d="M22 37c1.8 2.1 10.2 2.1 12 0" stroke="#1B2130" stroke-width="2" stroke-linecap="round" fill="none"/>' +
+          '<rect x="24.5" y="40" width="7" height="6" rx="2.4" fill="#FFFFFF"/>' +
+        '</g>' +
       '</svg>' +
       '<svg class="eazify-chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
 
-    const nudge = el('div', { class: 'eazify-chat-nudge' , html: 'Need help? Click to chat with us 💬'});
+    const nudge = el('div', { class: 'eazify-chat-nudge' , html: 'Need help? Ask EaziAI 💬'});
 
-    const panel = el('div', { class: 'eazify-chat-panel', role: 'dialog', 'aria-label': 'Chat with Eazify' });
+    const panel = el('div', { class: 'eazify-chat-panel', role: 'dialog', 'aria-label': 'Chat with EaziAI' });
 
     const header = el('div', { class: 'eazify-chat-header' }, [
-      el('div', { class: 'eazify-chat-header-text', html: '<strong>Ask Eazify</strong><span>Usually replies in a few seconds</span>' }),
+      el('div', { class: 'eazify-chat-header-row' }, [
+        el('img', { src: 'assets/eaziai-badge-64.png', alt: '', class: 'eazify-chat-badge' }),
+        el('div', { class: 'eazify-chat-header-text', html: '<strong>Ask EaziAI</strong><span>Usually replies in a few seconds</span>' }),
+      ]),
     ]);
 
     const messages = el('div', { class: 'eazify-chat-messages' });

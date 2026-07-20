@@ -1,0 +1,16 @@
+{
+  "name": "Eazify Innovations",
+  "short_name": "Eazify",
+  "description": "Your Trusted Technology Partner — Business & AI Transformation, Custom Software, Websites, and Brand Systems.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0B1E4D",
+  "theme_color": "#0A63F7",
+  "icons": [
+    { "src": "assets/eaziai-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/eaziai-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/eaziai-icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/eaziai-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

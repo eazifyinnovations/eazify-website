@@ -1,6 +1,13 @@
 // Eazify Innovations — shared site behavior
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Optional PWA support — silent registration, no install nag/popup.
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+    });
+  }
+
   // Reveal the page (CSS also force-reveals after 0.7s if JS is ever delayed/blocked)
   requestAnimationFrame(() => document.body.classList.add('page-loaded'));
 
