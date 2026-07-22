@@ -44,12 +44,16 @@
   .sol-chatbot-nudge p { margin: 0; font-size: 0.92rem; }
   @media (max-width: 900px) { .sol-overview { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 600px) { .sol-overview { grid-template-columns: 1fr; } .sol-chatbot-nudge { flex-direction: column; align-items: flex-start; } }
-  .sol-problem { font-family: var(--font-display); font-size: 1.4rem; color: var(--deep-navy); margin-bottom: var(--space-2); }
+  .sol-problem { font-family: var(--font-display); font-size: 1.55rem; line-height: 1.3; color: var(--deep-navy); margin-bottom: var(--space-2); border-left: 3px solid var(--electric-blue); padding-left: 16px; }
+  .sol-why { font-size: 0.95rem; color: var(--muted); margin-top: var(--space-3); padding: 12px 16px; border: 1px dashed var(--line); border-radius: var(--radius-md); }
+  .sol-why strong { color: var(--deep-navy); }
+  .sol-outcome-box { background: linear-gradient(135deg, var(--electric-blue-dim), var(--light-grey)); border: 1px solid var(--line); }
   .sol-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .sol-list li { display: flex; gap: 10px; font-size: 0.95rem; color: var(--muted); }
   .sol-list li::before { content: "→"; color: var(--electric-blue); flex-shrink: 0; }
   .sol-outcome-box { background: var(--light-grey); border-radius: var(--radius-md); padding: var(--space-3); margin-top: var(--space-3); }
   .sol-outcome-box h4 { font-family: var(--font-display); font-size: 0.95rem; color: var(--deep-navy); margin-bottom: 8px; }
+  .sol-cta { margin-top: var(--space-3); }
   @media (max-width: 900px) { .sol-block-grid { grid-template-columns: 1fr; } }
 </style>
 <script type="application/ld+json">
@@ -126,7 +130,7 @@
   <section class="sol-page-hero">
     <div class="container">
       <div class="eyebrow">Solutions</div>
-      <h1>People don't wake up wanting a website. They want more customers, less manual work, and a business that runs smoother.</h1>
+      <h1>You want more customers and less manual work. A great website is how you get both.</h1>
       <p class="lede" style="max-width:62ch;">Technology is how we get you there. Every solution below starts with the business problem — not the software.</p>
     </div>
   </section>
@@ -189,10 +193,12 @@
           <li>Integrate AI into how your team already works</li>
           <li>Train your team and stay on for ongoing support</li>
         </ul>
+        <div class="sol-why"><strong>Why only Eazify:</strong> Most consultants sell you a chatbot. We start by studying your workflows first — which is why what we build actually gets used, not abandoned after month one.</div>
         <div class="sol-outcome-box">
-          <h4>What changes afterwards</h4>
-          <p style="margin:0;">Less repetitive work, faster customer response, and decisions made with better information.</p>
+          <h4>The business you become</h4>
+          <p style="margin:0;">Your team stops firefighting the same 20 tasks every week — and starts spending that time on the work that actually grows the business. Eazify is the only partner here that insists on studying your workflow before touching a tool, so what we build fits how you already win.</p>
         </div>
+        <div class="sol-cta"><a href="strategy-session.html?from=ai" class="btn btn-primary">Fix this in your business <span class="btn-arrow">→</span></a></div>
       </div>
     </div>
   </section>
@@ -215,10 +221,12 @@
           <li>Industry-specific software</li>
           <li>Mobile applications and digital products</li>
         </ul>
+        <div class="sol-why"><strong>Why only Eazify:</strong> Off-the-shelf tools force your team to bend around software that was never built for you. We only build what your business specifically needs — nothing generic, nothing bloated.</div>
         <div class="sol-outcome-box">
-          <h4>What changes afterwards</h4>
-          <p style="margin:0;">A system that fits how your business runs — not one your team has to work around.</p>
+          <h4>The business you become</h4>
+          <p style="margin:0;">A system your team actually opens every day, because it was shaped around how you already operate — not the other way round. Eazify is the only partner here that designs around your objective first, and the technology second.</p>
         </div>
+        <div class="sol-cta"><a href="strategy-session.html?from=software" class="btn btn-primary">Build the right system <span class="btn-arrow">→</span></a></div>
       </div>
     </div>
   </section>
@@ -241,10 +249,12 @@
           <li>Search visibility and content strategy</li>
           <li>A mobile experience that never feels like an afterthought</li>
         </ul>
+        <div class="sol-why"><strong>Why only Eazify:</strong> Most agencies deliver a good-looking website and disappear. We treat it as a growth engine — measured by leads and trust earned, not just design awards.</div>
         <div class="sol-outcome-box">
-          <h4>What changes afterwards</h4>
-          <p style="margin:0;">More qualified leads, and a website that actively supports the rest of your business system.</p>
+          <h4>The business you become</h4>
+          <p style="margin:0;">A website that quietly does the convincing before a customer ever calls you — more qualified leads, faster trust, and a digital front door that matches how good your business actually is. Eazify is the only partner here that ties your website's success to your business's, not just to how it looks.</p>
         </div>
+        <div class="sol-cta"><a href="strategy-session.html?from=websites" class="btn btn-primary">Fix my website <span class="btn-arrow">→</span></a></div>
       </div>
     </div>
   </section>
@@ -265,10 +275,12 @@
           <li>Presentation templates and marketing assets</li>
           <li>Consistency across every digital surface</li>
         </ul>
+        <div class="sol-why"><strong>Why only Eazify:</strong> Most agencies hand you a logo and a PDF. We build a system your whole business can actually apply — consistently, without a designer on standby.</div>
         <div class="sol-outcome-box">
-          <h4>What changes afterwards</h4>
-          <p style="margin:0;">A business that's instantly recognisable — and consistently trusted — wherever it shows up.</p>
+          <h4>The business you become</h4>
+          <p style="margin:0;">A business people recognise instantly and trust automatically, because it looks and sounds like itself everywhere it shows up. Eazify is the only partner here that builds brand as a system, not a one-off design project.</p>
         </div>
+        <div class="sol-cta"><a href="strategy-session.html?from=brand" class="btn btn-primary">Fix our brand consistency <span class="btn-arrow">→</span></a></div>
       </div>
     </div>
   </section>
@@ -290,10 +302,12 @@
           <li>Continuous optimisation and future improvements</li>
           <li>Product evolution as your business changes</li>
         </ul>
+        <div class="sol-why"><strong>Why only Eazify:</strong> Most vendors complete a project and move on to the next client. We stay — because a business that keeps growing needs technology that keeps growing with it.</div>
         <div class="sol-outcome-box">
-          <h4>What changes afterwards</h4>
-          <p style="margin:0;">Technology that keeps up with your business, instead of becoming outdated the year after launch.</p>
+          <h4>The business you become</h4>
+          <p style="margin:0;">Technology that evolves as fast as your business does, with a partner who already knows your systems instead of a new vendor starting from zero every time. Eazify is the only partner here built around staying, not just shipping.</p>
         </div>
+        <div class="sol-cta"><a href="strategy-session.html?from=partnership" class="btn btn-primary">Start a partnership <span class="btn-arrow">→</span></a></div>
       </div>
     </div>
   </section>

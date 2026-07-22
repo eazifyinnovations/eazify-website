@@ -130,7 +130,7 @@
   <section class="impact-hero">
     <div class="container">
       <div class="eyebrow">Impact</div>
-      <h1>We'd rather show you what changed than tell you how good we are.</h1>
+      <h1>We'd rather show you what changed than tell you we're good.</h1>
       <p class="lede" style="max-width:62ch;">Every case study below follows the same structure: the challenge, our approach, the solution, and the outcome. No inflated numbers — just what actually happened.</p>
     </div>
   </section>
@@ -187,21 +187,31 @@
           </div>
           <span class="status-live"><span class="dot"></span> Live</span>
         </div>
-        <div class="platform-subtags">
-          <span class="platform-subtag">Pray for India</span>
-          <span class="platform-subtag">Jesus for India</span>
+        <div class="platform-toggle" role="tablist" aria-label="Choose a platform">
+          <button type="button" class="platform-tab is-active" data-platform="pray" role="tab" aria-selected="true">Pray for India</button>
+          <button type="button" class="platform-tab" data-platform="jesus" role="tab" aria-selected="false">Jesus for India</button>
         </div>
-        <div class="full-case-media">
+        <div class="full-case-media platform-media" data-platform-panel="pray">
           <div class="shot"><img src="assets/screenshots/pray4india-3.jpg" width="1080" height="2036" alt="Pray for India homepage"></div>
-          <div class="shot"><img src="assets/screenshots/jesus4india-1.jpg" width="1080" height="2014" alt="Jesus for India homepage"></div>
+          <div class="shot"><img src="assets/screenshots/pray4india-1.jpg" width="1080" height="2226" alt="Pray for India prayer wall"></div>
           <div class="shot"><img src="assets/screenshots/pray4india-2.jpg" width="1080" height="2226" alt="Pray for India sign-up form"></div>
         </div>
-        <div class="case-cols">
-          <div class="case-col"><h4>Challenge</h4><p>MCK Mission needed to reach people in two different ways — daily prayer participation across language barriers, and mission storytelling that builds lasting connection.</p></div>
-          <div class="case-col"><h4>Approach</h4><p>Rather than force one platform to do two jobs, we designed two connected experiences, each built around a distinct part of the mission's vision.</p></div>
-          <div class="case-col"><h4>Solution</h4><p><strong>Pray for India</strong> is a multilingual platform directing visitors into language-specific prayer communities. <strong>Jesus for India</strong> is a dedicated storytelling platform communicating the mission's broader work and journey.</p></div>
-          <div class="case-col"><h4>Outcome</h4><p>MCK Mission now reaches a global audience two ways — daily spiritual participation, and an ongoing story people can follow and support.</p></div>
+        <div class="full-case-media platform-media" data-platform-panel="jesus" hidden>
+          <div class="shot"><img src="assets/screenshots/jesus4india-1.jpg" width="1080" height="2014" alt="Jesus for India homepage"></div>
         </div>
+        <div class="case-cols platform-copy" data-platform-panel="pray">
+          <div class="case-col"><h4>Challenge</h4><p>Reaching people for daily prayer participation across language barriers.</p></div>
+          <div class="case-col"><h4>Approach</h4><p>Designed a focused, distraction-free platform built entirely around one daily action: showing up to pray.</p></div>
+          <div class="case-col"><h4>Solution</h4><p>A multilingual platform directing visitors into language-specific prayer communities, so nobody is left out by the language they pray in.</p></div>
+          <div class="case-col"><h4>Outcome</h4><p>A growing global community with a daily spiritual habit, in the language that speaks to them.</p></div>
+        </div>
+        <div class="case-cols platform-copy" data-platform-panel="jesus" hidden>
+          <div class="case-col"><h4>Challenge</h4><p>Mission storytelling that builds a lasting connection, beyond a single daily action.</p></div>
+          <div class="case-col"><h4>Approach</h4><p>Designed a dedicated storytelling experience — separate from the prayer platform — built around narrative, not just utility.</p></div>
+          <div class="case-col"><h4>Solution</h4><p>A platform communicating the mission's broader work and journey, so supporters can follow the story, not just a single feature.</p></div>
+          <div class="case-col"><h4>Outcome</h4><p>An ongoing story people can follow, engage with, and support over time.</p></div>
+        </div>
+        <p style="margin-top:var(--space-3); font-size:0.9rem; color:var(--muted);">MCK Mission needed to reach people two different ways, so rather than force one platform to do two jobs, we built two connected experiences — each led by its own part of the vision.</p>
       </div>
 
       <div class="full-case reveal">
@@ -371,6 +381,24 @@
 
 <script src="script.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.platform-tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var target = tab.getAttribute('data-platform');
+      tabs.forEach(function(t){
+        var active = t === tab;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      document.querySelectorAll('[data-platform-panel]').forEach(function(panel){
+        panel.hidden = panel.getAttribute('data-platform-panel') !== target;
+      });
+    });
+  });
+})();
+</script>
 <script src="chatbot.js" defer></script>
 </body>
 </html>
