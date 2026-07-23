@@ -34,29 +34,13 @@
       'aria-expanded': 'false',
       type: 'button',
     });
-    // Friendly support-avatar: warm brown skin tone, natural coily hair, soft
-    // smile, subtle headset — reads as "a real person is here to help."
-    // Eyes/head are split into their own groups so CSS can blink/bob them.
+    // Launcher icon: the glowing "E" mark, on its own dark rounded frame —
+    // replaces the earlier illustrated support-avatar.
     toggle.innerHTML =
-      '<svg class="eazify-chat-icon-open" width="40" height="40" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-        '<circle cx="28" cy="28" r="26" fill="#0A63F7"/>' +
-        '<g class="eazi-avatar-bob">' +
-          '<path d="M13 28a15 15 0 0 1 30 0" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" fill="none"/>' +
-          '<rect x="10.5" y="25" width="6.5" height="11" rx="3.2" fill="#FFFFFF"/>' +
-          '<rect x="39" y="25" width="6.5" height="11" rx="3.2" fill="#FFFFFF"/>' +
-          '<path d="M15.2 27c-0.3-7.8 5.3-13.5 12.8-13.5s13.1 5.7 12.8 13.5c-0.3 3-1.4 5-2.4 6.2-0.2-6.8-4-11.7-10.4-11.7s-10.2 4.9-10.4 11.7c-1-1.2-2.1-3.2-2.4-6.2Z" fill="#1B2130"/>' +
-          '<circle cx="28" cy="31" r="12" fill="#9A6238"/>' +
-          '<g class="eazi-avatar-eyes">' +
-            '<circle cx="23.2" cy="31.5" r="1.7" fill="#1B2130"/>' +
-            '<circle cx="32.8" cy="31.5" r="1.7" fill="#1B2130"/>' +
-          '</g>' +
-          '<path d="M22 37c1.8 2.1 10.2 2.1 12 0" stroke="#1B2130" stroke-width="2" stroke-linecap="round" fill="none"/>' +
-          '<rect x="24.5" y="40" width="7" height="6" rx="2.4" fill="#FFFFFF"/>' +
-        '</g>' +
-      '</svg>' +
+      '<img class="eazify-chat-icon-open" src="assets/eaziai-launcher.png" alt="" width="40" height="40">' +
       '<svg class="eazify-chat-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
 
-    const nudge = el('div', { class: 'eazify-chat-nudge' , html: 'Need help? Ask EaziAI 💬'});
+    const nudge = el('div', { class: 'eazify-chat-nudge' , html: 'Chat with EaziAI to find your tailored solution →'});
 
     const panel = el('div', { class: 'eazify-chat-panel', role: 'dialog', 'aria-label': 'Chat with EaziAI' });
 
@@ -158,21 +142,30 @@
     const widget = buildWidget();
 
     // Nudge people to notice the widget is clickable — most visitors don't
-    // recognize a floating icon as a live chat without a hint.
+    // recognize a floating icon as a live chat without a hint. Cycles on
+    // repeat (visible 5s, hidden 60s) rather than showing once and vanishing,
+    // so people who scroll past it early still get another chance to see it.
     let nudgeShown = false;
-    let nudgeTimer = setTimeout(() => {
-      if (!isOpen) {
-        widget.nudge.classList.add('is-visible');
-        nudgeShown = true;
-      }
-    }, 2200);
-    let nudgeAutoHide = setTimeout(() => {
-      widget.nudge.classList.remove('is-visible');
-    }, 10000);
+    const NUDGE_VISIBLE_MS = 5000;
+    const NUDGE_INTERVAL_MS = 60000;
+
+    function showNudge() {
+      if (isOpen) return;
+      widget.nudge.classList.add('is-visible');
+      nudgeShown = true;
+      nudgeHideTimer = setTimeout(() => {
+        widget.nudge.classList.remove('is-visible');
+      }, NUDGE_VISIBLE_MS);
+    }
+
+    let nudgeHideTimer = null;
+    let nudgeTimer = setTimeout(showNudge, 2200);
+    let nudgeCycle = setInterval(showNudge, NUDGE_INTERVAL_MS);
 
     function dismissNudge() {
       clearTimeout(nudgeTimer);
-      clearTimeout(nudgeAutoHide);
+      clearTimeout(nudgeHideTimer);
+      clearInterval(nudgeCycle);
       widget.nudge.classList.remove('is-visible');
     }
 
