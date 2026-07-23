@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const twEl = document.getElementById('heroTypewriter');
   if (twEl) {
     const phrases = [
-      { name: 'TrustedPartner', colorClass: 'c0' },
+      { name: 'TrustedTechPartner', colorClass: 'c0' },
       { name: 'UnderstandFirst', colorClass: 'c1' },
       { name: 'RealResults', colorClass: 'c2' },
     ];

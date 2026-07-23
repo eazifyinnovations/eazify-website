@@ -62,7 +62,7 @@
 
     const header = el('div', { class: 'eazify-chat-header' }, [
       el('div', { class: 'eazify-chat-header-row' }, [
-        el('img', { src: 'assets/eaziai-badge-64.png', alt: '', class: 'eazify-chat-badge' }),
+        el('img', { src: 'assets/eazify-mark.png', alt: '', class: 'eazify-chat-badge' }),
         el('div', { class: 'eazify-chat-header-text', html: '<strong>Ask EaziAI</strong><span>Usually replies in a few seconds</span>' }),
       ]),
     ]);
