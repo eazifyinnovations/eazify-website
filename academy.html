@@ -37,7 +37,7 @@
   .cohort-stat { text-align: center; }
   .cohort-stat b { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--deep-navy); }
   .cohort-stat span { font-size: 0.85rem; color: var(--muted); }
-  .aca-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); }
+  .aca-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); align-items: stretch; }
   .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
   .offer-item { border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-3); }
   .track-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
@@ -70,6 +70,12 @@
   .offer-item { position: relative; overflow: hidden; }
   .offer-item::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--electric-blue); }
   .offer-item { padding-left: calc(var(--space-3) + 4px); }
+  .structure-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-4); }
+  .structure-card-accent { background: linear-gradient(160deg, var(--surface-dark-2), #14306e); border: none; }
+  .structure-card-accent .eyebrow { color: #8fb3ff; }
+  .structure-card-accent h2, .structure-card-accent .check-list li { color: var(--pure-white); }
+  .structure-card-accent .check-list li::before { color: #6fa8ff; }
+  .aca-pullquote { font-family: var(--font-display); font-size: 1.15rem; color: var(--deep-navy); border-left: 3px solid var(--electric-blue); padding-left: 16px; margin: 12px 0 8px; }
   @media (max-width: 900px) { .aca-cols { grid-template-columns: 1fr; } .offer-grid { grid-template-columns: 1fr 1fr; } .track-grid { grid-template-columns: 1fr; } }
   @media (max-width: 560px) { .offer-grid { grid-template-columns: 1fr; } }
 </style>
@@ -253,18 +259,18 @@
     </div>
   </section>
 
-  <section id="structure">
+  <section id="structure" style="background:linear-gradient(180deg, var(--light-grey), var(--white));">
     <div class="container aca-cols">
-      <div class="reveal">
+      <div class="reveal structure-card">
         <div class="eyebrow">Who it's for</div>
         <h2>No unnecessary barriers.</h2>
         <p>Students, graduates, career changers, business owners, developers, designers, professionals, entrepreneurs — anyone willing to learn.</p>
 
         <div class="eyebrow" style="margin-top:var(--space-4);">Learning philosophy</div>
-        <h2>Videos alone don't build careers.</h2>
-        <p>People need guidance, accountability, real projects, mentorship, feedback, and community. Everything in the Academy supports employability and practical application — not just watching lessons.</p>
+        <p class="aca-pullquote">"Videos alone don't build careers. People need guidance, accountability, real projects, mentorship, feedback, and community."</p>
+        <p style="font-size:0.9rem; color:var(--muted);">Everything in the Academy supports employability and practical application — not just watching lessons.</p>
       </div>
-      <div class="reveal">
+      <div class="reveal structure-card structure-card-accent">
         <div class="eyebrow">Delivery</div>
         <h2>Entirely online. Genuinely live.</h2>
         <ul class="check-list">
@@ -364,7 +370,7 @@
         <a href="contact.html">Get in touch</a>
         <a href="strategy-session.html">Schedule a Strategy Session</a>
         <a href="mailto:hello@eazifyinnovations.com">hello@eazifyinnovations.com</a>
-        <a>Abuja, Nigeria</a>
+        <span>Abuja, Nigeria</span>
       </div>
     </div>
     <div class="footer-bottom">
