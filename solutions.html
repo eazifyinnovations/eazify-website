@@ -35,6 +35,7 @@
   .sol-block:nth-of-type(even) { background: var(--light-grey); }
   .sol-block-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-5); align-items: start; position: relative; z-index: 1; }
   .sol-watermark { position: absolute; top: -0.3em; right: -0.05em; font-family: var(--font-display); font-weight: 700; font-size: clamp(8rem, 14vw, 13rem); line-height: 1; color: var(--deep-navy); opacity: 0.04; z-index: 0; pointer-events: none; user-select: none; }
+  @media (max-width: 600px) { .sol-watermark { font-size: clamp(4.5rem, 24vw, 6.5rem); } }
   .sol-icon { width: 56px; height: 56px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--electric-blue), #14306e); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-2); box-shadow: 0 10px 24px -12px rgba(10,99,247,0.5); }
   .sol-icon svg path, .sol-icon svg rect, .sol-icon svg circle { stroke: #fff !important; }
   .sol-visual { aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; margin-top: var(--space-3); background: linear-gradient(135deg, var(--electric-blue-dim), var(--light-grey)); }
