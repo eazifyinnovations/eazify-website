@@ -27,7 +27,7 @@
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0A63F7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <style>
   .plat-hero { padding: 160px 0 var(--space-5); background:
     radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
@@ -37,11 +37,11 @@
   .zifa-card { background: var(--surface-dark); color: var(--pure-white); border-radius: var(--radius-lg); padding: var(--space-5); }
   .zifa-card h2, .zifa-card p, .zifa-card h3 { color: var(--pure-white); }
   .zifa-card p { opacity: 0.8; }
-  .zifa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-4); }
-  .zifa-item { border-top: 1px solid rgba(255,255,255,0.15); padding-top: var(--space-2); }
+  .zifa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+  .zifa-item { border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); padding: var(--space-3); background: rgba(255,255,255,0.04); }
   .future-cats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--space-2); }
   .cat-pill { border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; font-size: 0.9rem; color: var(--deep-navy); }
-  @media (max-width: 900px) { .zifa-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .zifa-grid { grid-template-columns: 1fr; } .zifa-card { padding: var(--space-3); } }
 </style>
 <script type="application/ld+json">
 {
@@ -59,7 +59,11 @@
     "addressLocality": "Abuja",
     "addressCountry": "NG"
   },
-  "areaServed": ["Nigeria", "Africa", "Remote / Worldwide"],
+  "areaServed": [
+    "Nigeria",
+    "Africa",
+    "Remote / Worldwide"
+  ],
   "sameAs": [
     "https://www.instagram.com/eazifyinnovations",
     "https://x.com/eazifytech"
@@ -70,6 +74,14 @@
     "Business Websites & Digital Experiences",
     "Brand Systems & Digital Identity",
     "Technology Partnership"
+  ],
+  "knowsAbout": [
+    "AI Business Transformation",
+    "Custom Software Development",
+    "Business Website Design",
+    "Brand Systems & Digital Identity",
+    "Technology Consulting for SMEs",
+    "AI Automation for African Businesses"
   ]
 }
 </script>
@@ -227,8 +239,8 @@
   </div>
 </footer>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="chatbot.js?v=4" defer></script>
+<script src="chatbot.js?v=5" defer></script>
 </body>
 </html>

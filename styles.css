@@ -67,7 +67,11 @@ html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 [data-theme="dark"] body { background: var(--white); }
 [data-theme="dark"] .site-header { background: rgba(13,18,32,0.4); border-bottom-color: rgba(255,255,255,0.08); }
 [data-theme="dark"] .site-header.is-scrolled { box-shadow: 0 6px 24px -18px rgba(0,0,0,0.6); }
-[data-theme="dark"] .mobile-menu { background: rgba(13,18,32,0.9); border-top-color: rgba(255,255,255,0.1); }
+[data-theme="dark"] .mobile-menu {
+  background: linear-gradient(165deg, rgba(24,40,74,0.95) 0%, rgba(13,18,32,0.96) 55%, rgba(11,15,25,0.96) 100%);
+  border-top-color: rgba(61,139,255,0.25);
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
+}
 [data-theme="dark"] .split-card { background: var(--light-grey); }
 [data-theme="dark"] .solution-card,
 [data-theme="dark"] .case-card,
@@ -367,11 +371,11 @@ blockquote::before {
   .nav-cta { display: none; }
   .mobile-menu {
     position: fixed; inset: 0; top: 68px;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(34px) saturate(220%);
-    -webkit-backdrop-filter: blur(34px) saturate(220%);
-    border-top: 1px solid rgba(255,255,255,0.6);
-    box-shadow: 0 16px 40px -20px rgba(11,30,77,0.3);
+    background: linear-gradient(165deg, rgba(210,226,255,0.94) 0%, rgba(244,247,252,0.94) 55%, rgba(255,255,255,0.94) 100%);
+    backdrop-filter: blur(40px) saturate(200%);
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+    border-top: 1px solid rgba(10,99,247,0.2);
+    box-shadow: 0 20px 50px -20px rgba(11,30,77,0.35), inset 0 1px 0 rgba(255,255,255,0.7);
     padding: var(--space-4) var(--space-3);
     display: flex; flex-direction: column; gap: var(--space-3);
     transform: translateY(-8px);
@@ -831,22 +835,4 @@ body.nav-open .eazify-chat-root { opacity: 0; transform: scale(0.9); pointer-eve
   .hero-actions, .final-cta .hero-actions { margin-bottom: 8px; }
 }
 
-/* ---------- Site-wide subtle card glow (dim electric blue) ---------- */
-.article-card, .booking-card, .case-card, .cohort-card, .contact-side-item, .faq-item,
-.honesty-box, .leader-card, .offer-item, .partner-pill, .platform-card, .roles-card,
-.sol-outcome-box, .sol-overview-item, .solution-card, .split-card, .structure-card,
-.teaser-card, .testimonial-card, .track-card, .trait-card, .value-item, .webinar-item,
-.why-item, .zifa-card, .zifa-item, .full-case, .track-banner {
-  box-shadow: 0 0 0 1px rgba(10,99,247,0.05), 0 20px 55px -32px rgba(10,99,247,0.4);
-}
-[data-theme="dark"] .article-card, [data-theme="dark"] .booking-card, [data-theme="dark"] .case-card,
-[data-theme="dark"] .cohort-card, [data-theme="dark"] .contact-side-item, [data-theme="dark"] .faq-item,
-[data-theme="dark"] .honesty-box, [data-theme="dark"] .leader-card, [data-theme="dark"] .offer-item,
-[data-theme="dark"] .partner-pill, [data-theme="dark"] .platform-card, [data-theme="dark"] .roles-card,
-[data-theme="dark"] .sol-outcome-box, [data-theme="dark"] .sol-overview-item, [data-theme="dark"] .solution-card,
-[data-theme="dark"] .split-card, [data-theme="dark"] .structure-card, [data-theme="dark"] .teaser-card,
-[data-theme="dark"] .testimonial-card, [data-theme="dark"] .track-card, [data-theme="dark"] .trait-card,
-[data-theme="dark"] .value-item, [data-theme="dark"] .webinar-item, [data-theme="dark"] .why-item,
-[data-theme="dark"] .zifa-card, [data-theme="dark"] .zifa-item, [data-theme="dark"] .full-case {
-  box-shadow: 0 0 0 1px rgba(61,139,255,0.08), 0 20px 55px -30px rgba(61,139,255,0.45);
-}
+
