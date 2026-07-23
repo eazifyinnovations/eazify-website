@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .about-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .about-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .story-timeline { position: relative; }
   .story-row { display: grid; grid-template-columns: 0.5fr 1fr; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--line); position: relative; }
   .story-row:last-of-type { border-bottom: none; }
@@ -135,7 +139,6 @@
 <main id="main-content">
 
   <section class="about-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="eyebrow">About Eazify</div>
       <h1>We started Eazify because most businesses buy tech before they understand what they need.</h1>

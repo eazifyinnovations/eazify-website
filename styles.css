@@ -38,6 +38,10 @@
   --space-7: 140px;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --hero-glow-1: rgba(10,99,247,0.10);
+  --hero-glow-2: rgba(10,99,247,0.07);
+  --hero-glow-3: rgba(11,30,77,0.06);
 }
 
 * { box-sizing: border-box; }
@@ -54,6 +58,10 @@ html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
   --muted: #97A2B8;
   --syntax-purple: #A78BFA;
   --syntax-teal: #2DD4BF;
+
+  --hero-glow-1: rgba(61,139,255,0.16);
+  --hero-glow-2: rgba(124,58,237,0.11);
+  --hero-glow-3: rgba(61,139,255,0.09);
 }
 
 [data-theme="dark"] body { background: var(--white); }
@@ -430,13 +438,6 @@ blockquote::before {
 .insights-hero, .contact-hero, .careers-hero, .partner-hero, .faq-hero, .ss-hero {
   position: relative;
   overflow: hidden;
-}
-.mesh-bg-page {
-  opacity: 0.55;
-  filter: blur(46px);
-}
-@media (prefers-reduced-motion: reduce) {
-  .mesh-bg-page { animation: none; }
 }
 .hero-typewriter {
   font-family: 'Fira Code', ui-monospace, 'Courier New', monospace;

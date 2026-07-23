@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .partner-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .partner-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .partner-types { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
   .partner-pill { border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-3); text-align: center; font-family: var(--font-display); color: var(--deep-navy); font-weight: 500; min-width: 0; overflow-wrap: break-word; }
   @media (max-width: 900px) { .partner-types { grid-template-columns: 1fr 1fr; } }
@@ -107,7 +111,6 @@
 <main id="main-content">
 
   <section class="partner-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-icon-accent"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="12" r="4" stroke="var(--electric-blue)" stroke-width="1.6"/><circle cx="16" cy="12" r="4" stroke="var(--electric-blue)" stroke-width="1.6"/></svg></div>
       <div class="eyebrow">Partnerships</div>

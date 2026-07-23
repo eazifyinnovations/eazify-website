@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .careers-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .careers-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .trait-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
   .trait-card { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-3); text-align: center; }
   .trait-card h3 { font-size: 1.05rem; }
@@ -109,7 +113,6 @@
 <main id="main-content">
 
   <section class="careers-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-icon-accent"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="8" r="3.2" stroke="var(--electric-blue)" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linecap="round"/><path d="M16 8a3 3 0 1 1 2.5 4.7M21 20c0-2.8-1.9-5.1-4.5-5.8" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
       <div class="eyebrow">Careers</div>

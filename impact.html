@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .impact-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .impact-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .full-case { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-4); margin-bottom: var(--space-4); }
   .full-case-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-3); }
   .full-case-media { display: flex; gap: 10px; margin-bottom: var(--space-3); }
@@ -126,7 +130,6 @@
 <main id="main-content">
 
   <section class="impact-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="eyebrow">Impact</div>
       <h1>We'd rather show you what changed than tell you we're good.</h1>

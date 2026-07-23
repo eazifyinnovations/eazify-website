@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .contact-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .contact-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-5); align-items: start; }
   .contact-side { position: sticky; top: 110px; }
   .contact-side-item { display: flex; gap: 12px; margin-bottom: var(--space-3); }
@@ -123,7 +127,6 @@
 <main id="main-content">
 
   <section class="contact-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-icon-accent"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.8-6A8.5 8.5 0 1 1 21 11.5Z" stroke="var(--electric-blue)" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
       <div class="eyebrow">Let's start a conversation</div>

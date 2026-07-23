@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .insights-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .insights-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .cat-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: var(--space-4); }
   .cat-pill-static { border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; font-size: 0.88rem; color: var(--muted); }
   .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
@@ -117,7 +121,6 @@
 <main id="main-content">
 
   <section class="insights-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="eyebrow">Insights</div>
       <h1>Practical thinking on business and technology. No filler.</h1>

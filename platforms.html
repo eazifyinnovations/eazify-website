@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#0D1220" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .plat-hero { padding: 160px 0 var(--space-5); background: linear-gradient(180deg, var(--light-grey), var(--white)); }
+  .plat-hero { padding: 160px 0 var(--space-5); background:
+    radial-gradient(38% 46% at 14% 18%, var(--hero-glow-1), transparent 68%),
+    radial-gradient(32% 40% at 86% 8%, var(--hero-glow-2), transparent 62%),
+    radial-gradient(46% 52% at 60% 90%, var(--hero-glow-3), transparent 68%),
+    linear-gradient(180deg, var(--light-grey), var(--white)); }
   .zifa-card { background: var(--surface-dark); color: var(--pure-white); border-radius: var(--radius-lg); padding: var(--space-5); }
   .zifa-card h2, .zifa-card p, .zifa-card h3 { color: var(--pure-white); }
   .zifa-card p { opacity: 0.8; }
@@ -111,7 +115,6 @@
 <main id="main-content">
 
   <section class="plat-hero">
-    <div class="mesh-bg mesh-bg-page" aria-hidden="true"></div>
     <div class="container">
       <div class="eyebrow">Platforms</div>
       <h1>We don't just build for clients. We build our own products too.</h1>
